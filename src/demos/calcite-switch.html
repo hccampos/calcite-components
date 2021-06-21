@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -112,5 +112,81 @@
         </div>
       </div>
     </div>
+  </body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Calcite Switch</title>
+
+    <!-- Importing the asset head-->
+    <script src="./_assets/head.js"></script>
+  </head>
+
+  <body>
+    <div>
+      <calcite-button href="/" color="neutral">
+        <calcite-icon icon="arrow-left" scale="l"></calcite-icon> Home
+      </calcite-button>
+    </div> 
+      
+    <h1 style="margin: 0 auto; text-align: center;">Switch</h1>
+
+
+    <div style=
+                "padding: 0 5em;" >
+
+      <calcite-label layout="inline">
+        Small 
+        <calcite-switch scale="s"></calcite-switch>
+      </calcite-label>
+
+      <calcite-label layout="inline">
+        Medium
+        <calcite-switch scale="m"></calcite-switch>
+      </calcite-label>
+
+      <calcite-label layout="inline">
+        Large
+          <calcite-switch scale="l"></calcite-switch>
+      </calcite-label>
+    </div>
+
+    <div>
+      <h3 style=
+                "padding: 1em 0 0 4em;">
+
+        RTL Set Directly on Switch</h3>
+      <calcite-label>
+        <calcite-switch style=
+                              "padding: 0 0 0 5.5em;" dir="rtl">
+        </calcite-switch>
+      </calcite-label>
+    </div>
+
+    <div>
+      <h3 style=
+                "padding: 1em 0 0 4em;">
+        Listening for "calciteSwitchChange"</h3>
+      <calcite-label>
+        <calcite-switch style="padding: 0 0 0 5.5em;" id="basicSwitch" switched="true"></calcite-switch>
+      </calcite-label>
+
+      <script>
+        var basicSwitch = document.getElementById("basicSwitch");
+
+        basicSwitch.addEventListener("calciteSwitchChange", (e) => {
+          console.log("Basic switch changed by <calcite-switch>", e.detail.switched);
+        });
+      </script>
+    </div>
+
+
   </body>
 </html>
